@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Instagram</title>
+        <style>
+            body {
+                background-color: #fafafa;
+                font-family: Arial, sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+            .container {
+                display: flex;
+                align-items: center;
+            }
+            .phone img {
+                height: 580px;
+            }
+            .register {
+                width: 350px;
+                text-align: center;
+            }
+            .border {
+                background-color: white;
+                border: 1px solid #dbdbdb;
+                padding: 40px;
+                margin-bottom: 10px;
+            }
+            .register img {
+                width: 180px;
+                margin-bottom: 20px;
+            }
+            .input {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 10px;
+                border: 1px solid #dbdbdb;
+                border-radius: 3px;
+                font-size: 14px;
+                background-color: #fafafa;
+            }
+            .button-enter {
+                width: 100%;
+                background-color: #0095f6;
+                color: white;
+                border: none;
+                padding: 10px;
+                border-radius: 5px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+            .button-enter:active {
+                background-color: #0077cc;
+            }
+            .or-container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 20px 0;
+                color: #8e8e8e;
+                font-weight: bold;
+            }
+            .or-container::before,
+            .or-container::after {
+                content: "";
+                flex: 1;
+                border-bottom: 1px solid #dbdbdb;
+                margin: 0 10px;
+            }
+            .button2 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: none;
+                background-color: white;
+                color: #385185;
+                font-weight: bold;
+                font-size: 14px;
+                cursor: pointer;
+                width: 100%;
+            }
+            .button2 img {
+                width: 20px;
+                margin-right: 8px;
+            }
+            .forgot-password {
+                color: #00376b;
+                text-decoration: none;
+                font-size: 14px;
+                display: block;
+                margin-top: 15px;
+            }
+            .account {
+                border: 1px solid #dbdbdb;
+                padding: 20px;
+                background-color: white;
+            }
+            .account a {
+                color: #0095f6;
+                font-weight: bold;
+                text-decoration: none;
+            }
+            .download img {
+                width: 130px;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="phone">
+                <img src="./static/img/insta_phone.png" />
+            </div>
+            <div class="register">
+                <div class="border">
+                    <img src="./static/img/logo.png" alt="logo" />
+                    <input type="text" class="input" placeholder="Телефон, имя пользователя или эл. адрес">
+                    <input type="password" class="input" placeholder="Пароль">
+                    <button class="button-enter">Войти</button>
+                    <div class="or-container">ИЛИ</div>
+                    <button class="button2">
+                        <img src="./static/img/fb_small.png">
+                        Войти через Facebook
+                    </button>
+                    <a href="" class="forgot-password">Забыли пароль?</a>
+                </div>
+                <div class="account">
+                    У вас ещё нет аккаунта? <a href="">Зарегистрироваться</a>
+                </div>
+                <p>Установите приложение.</p>
+                <div class="download">
+                    <img alt="Скачать из App Store" src="https://static.cdninstagram.com/rsrc.php/v3/y9/r/E_2mQvC3HG-.png">
+                    <img alt="Скачать из Google Play" src="https://static.cdninstagram.com/rsrc.php/v3/yr/r/fDjwyLC88oO.png">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
