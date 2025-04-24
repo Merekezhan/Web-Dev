@@ -1,7 +1,27 @@
-<div class="post-list">
-    <h2>All Posts</h2>
-    <div *ngFor="let post of posts">
-      <app-post-card [post]="post"></app-post-card> <!-- Используем компонент PostCard для отображения постов -->
+<!-- <div *ngFor="let post of posts">
+  <div class="post">
+    <h4>{{ post.title }}</h4>
+    <p>{{ post.body }}</p>
+    <div>by {{ post.author }} on {{ post.date }}</div>
+    <div class="tags">
+      <span *ngFor="let tag of post.tags" class="tag">{{ tag }}</span>
     </div>
+    <button (click)="onEditPost(post.id)">Edit</button>
+    <button (click)="onDeletePost(post.id)">Delete</button>
+    <button (click)="onAddComment(post.id)">Add Comment</button>
   </div>
-  
+</div> -->
+<div *ngFor="let post of posts">
+  <div class="post">
+    <h4>{{ post.title }}</h4>
+    <p>{{ post.body }}</p>
+    <div>by {{ post.author }} on {{ post.date }}</div>
+    <div class="tags">
+      <span *ngFor="let tag of post.tags" class="tag">{{ tag }}</span>
+    </div>
+    <button (click)="onEditPost(post.id)">Edit</button>
+    <button (click)="onDeletePost(post.id)">Delete</button>
+    <button (click)="onAddComment(post.id)">Add Comment</button>
+  </div>
+</div>
+

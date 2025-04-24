@@ -1,34 +1,36 @@
 
-// import { Routes } from '@angular/router';
-// import { RouterModule } from '@angular/router';
-// import { LoginComponent } from './pages/auth/login/login.component';  // Импортируем standalone компоненты
-// import { RegisterComponent } from './pages/auth/register/register.component';
-// import { PostListComponent } from './components/post-list/post-list.component';  // Пример компонента с постами
+
+// import { NgModule } from '@angular/core';
+// import { RouterModule, Routes } from '@angular/router';
+// import { LoginComponent } from './pages/auth/login/login.component';
+// import { PostListComponent } from './components/post-list/post-list.component';
 
 // const routes: Routes = [
+//   { path: '', component: PostListComponent },
 //   { path: 'login', component: LoginComponent },
-//   { path: 'register', component: RegisterComponent },
-//   { path: 'posts', component: PostListComponent },
-//   { path: '', redirectTo: '/login', pathMatch: 'full' },
 // ];
 
-// export const AppRoutingModule = RouterModule.forRoot(routes);
+// @NgModule({
+//   imports: [RouterModule.forRoot(routes)],
+//   exports: [RouterModule],
+// })
+// export class AppRoutingModule {}
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './pages/auth/login/login.component';
 import { RegisterComponent } from './pages/auth/register/register.component';
-import { HomeComponent } from './pages/home/home/home.component';
+import { PostListComponent } from './components/post-list/post-list.component';  // Импортируй компоненты
+
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/posts', pathMatch: 'full' },  // Главная страница (переход на посты)
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'home', component: HomeComponent },  // Убедись, что добавлен правильный маршрут для HomeComponent
+  { path: 'posts', component: PostListComponent },  // Страница с постами
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}
-
 

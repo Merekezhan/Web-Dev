@@ -1,17 +1,31 @@
-
-import { Component } from '@angular/core';
-import { PostCardComponent } from '../post-card/post-card.component';  
+import { Component, OnInit } from '@angular/core';
+import { PostService } from '../../services/post.service';
+import { Post } from '../../models/post.model';
 
 @Component({
   selector: 'app-post-list',
-  standalone: true,
-  imports: [PostCardComponent],  
   templateUrl: './post-list.component.html',
-  styleUrls: ['./post-list.component.css']
 })
-export class PostListComponent {
-  posts = [
-    { title: 'Post 1', body: 'Body of post 1' },
-    { title: 'Post 2', body: 'Body of post 2' }
-  ];
+export class PostListComponent implements OnInit {
+  posts: Post[] = [];
+
+  constructor(private postService: PostService) {}
+
+  ngOnInit() {
+    this.postService.getPosts().subscribe(posts => {
+      this.posts = posts;
+    });
+  }
+
+  onEditPost(id: number) {
+    console.log('Edit post with id:', id);
+  }
+
+  onDeletePost(id: number) {
+    console.log('Delete post with id:', id);
+  }
+
+  onAddComment(id: number) {
+    console.log('Add comment to post with id:', id);
+  }
 }

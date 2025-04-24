@@ -1,10 +1,9 @@
 export interface Post {
-    id?: number;
-    title: string;
-    body: string;
-    category: string;
-    tags: string[];
-    author?: string;
-    created_at?: string;
-  }
-  
+  id: number;
+  title: string;
+  body: string;
+  author: string;
+  date: string;
+  tags: string[];
+  category: string;
+}
