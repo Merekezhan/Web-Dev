@@ -1,10 +1,7 @@
 const todoForm = document.querySelector('.add');
 const todoInput = document.querySelector('.inputText');
 const todoItemsList = document.querySelector('.todo-items');
-<<<<<<< HEAD
 //getelementbyId
-=======
->>>>>>> e1dace230c6129a6893b2c4ebcf962b86d31d07e
 
 let todos = [];
 
@@ -14,7 +11,6 @@ todoForm.addEventListener('submit', function(event) {
 });
 
 function addTodo(item) {
-<<<<<<< HEAD
     if (item.trim() === '') {
         alert("Please enter a task before adding!"); 
         return;
@@ -33,7 +29,6 @@ let a =prompt("sdf", 1);
     addToLocalStorage(todos);
     todoInput.value = '';
 }
-=======
     if (item !== '') {
         const todo = {
             id: Date.now(),
@@ -45,9 +40,7 @@ let a =prompt("sdf", 1);
         todoInput.value = '';
     }
     console.log(todos);
-}
 
->>>>>>> e1dace230c6129a6893b2c4ebcf962b86d31d07e
 function renderTodos(todos) {
     todoItemsList.innerHTML = '';
 
@@ -56,10 +49,8 @@ function renderTodos(todos) {
         const li = document.createElement('li');
 
         li.setAttribute('class', 'item');
-<<<<<<< HEAD
-=======
 
->>>>>>> e1dace230c6129a6893b2c4ebcf962b86d31d07e
+
         li.setAttribute('data-key', item.id);
 
         if (item.completed === true) {
